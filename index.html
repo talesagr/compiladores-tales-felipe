@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador Sintático Top-Down Preditivo Tabular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Analisador Sintático Top-Down Preditivo Tabular</h1>
+            <p class="subtitle">Autômato de Pilha - GLC LL(1)</p>
+        </header>
+
+        <div class="content">
+            <!-- Seção da Gramática -->
+            <section class="grammar-section">
+                <h2>Gramática Livre de Contexto (GLC LL(1))</h2>
+                <div class="grammar-display" id="grammarDisplay"></div>
+            </section>
+
+            <!-- Seção FIRST e FOLLOW -->
+            <section class="sets-section">
+                <div class="sets-container">
+                    <div class="set-box">
+                        <h3>Conjuntos FIRST</h3>
+                        <div id="firstSets"></div>
+                    </div>
+                    <div class="set-box">
+                        <h3>Conjuntos FOLLOW</h3>
+                        <div id="followSets"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tabela de Parsing -->
+            <section class="table-section">
+                <h2>Tabela de Parsing LL(1)</h2>
+                <div class="table-container" id="parsingTable"></div>
+            </section>
+
+            <!-- Área de Entrada -->
+            <section class="input-section">
+                <h2>Análise de Sentenças</h2>
+                <div class="input-controls">
+                    <div class="input-group">
+                        <label for="sentenceInput">Digite uma sentença:</label>
+                        <input type="text" id="sentenceInput" placeholder="Ex: abcd" />
+                        <button id="analyzeBtn">Analisar</button>
+                    </div>
+                    <div class="input-group">
+                        <button id="generateBtn">Gerar Sentença Interativamente</button>
+                        <button id="clearBtn">Limpar</button>
+                        <button id="resetBtn">Reiniciar Analisador</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resultado da Análise -->
+            <section class="result-section">
+                <h2>Resultado da Análise</h2>
+                <div id="resultDisplay"></div>
+            </section>
+
+            <!-- Traço de Execução da Pilha -->
+            <section class="trace-section">
+                <h2>Traço de Execução da Pilha</h2>
+                <div class="trace-info">
+                    <span id="stepCount">Passos: 0</span>
+                </div>
+                <div class="trace-container" id="traceDisplay"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="grammar.js"></script>
+    <script src="analyzer.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
