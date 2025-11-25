@@ -65,7 +65,6 @@ section h3 {
     font-size: 1.4em;
 }
 
-/* Gramática */
 .grammar-display {
     background: white;
     padding: 20px;
@@ -93,7 +92,6 @@ section h3 {
     font-size: 1.1em;
 }
 
-/* Conjuntos FIRST e FOLLOW */
 .sets-section {
     background: #f8f9fa;
 }
@@ -129,7 +127,6 @@ section h3 {
     color: #764ba2;
 }
 
-/* Tabela de Parsing */
 .table-container {
     overflow-x: auto;
     background: white;
@@ -182,7 +179,6 @@ section h3 {
     font-style: italic;
 }
 
-/* Área de Entrada */
 .input-section {
     background: white;
 }
@@ -242,7 +238,6 @@ button:active {
     transform: translateY(0);
 }
 
-/* Resultado */
 .result-section {
     background: white;
 }
@@ -278,7 +273,6 @@ button:active {
     margin-bottom: 10px;
 }
 
-/* Traço de Execução */
 .trace-section {
     background: white;
 }
@@ -341,7 +335,6 @@ button:active {
     color: #155724;
 }
 
-/* Geração Interativa */
 .generation-steps {
     padding: 20px;
     background: #e7f3ff;
@@ -412,7 +405,6 @@ button:active {
     transform: translateY(0);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .sets-container {
         grid-template-columns: 1fr;
