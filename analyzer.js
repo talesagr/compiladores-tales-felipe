@@ -30,7 +30,7 @@ class PredictiveParser {
           }
           stack.pop();
           inputIndex++;
-          this.addTraceStep(stack, inputTokens, inputIndex, `Match: ${top}`);
+          this.addTraceStep(stack, inputTokens, inputIndex, `Ler ${top}`);
         } else {
           this.addTraceStep(
             stack,
@@ -76,7 +76,7 @@ class PredictiveParser {
           stack,
           inputTokens,
           inputIndex,
-          `Aplicar: ${top} -> ${productionStr}`
+          `${top} -> ${productionStr}`
         );
       } else {
         this.addTraceStep(
@@ -103,7 +103,7 @@ class PredictiveParser {
   }
 
   addTraceStep(stack, input, inputIndex, action) {
-    const stackCopy = [...stack].revers;
+    const stackCopy = [...stack].reverse();
     const remainingInput = input.slice(inputIndex).join("");
 
     this.trace.push({
